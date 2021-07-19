@@ -51,7 +51,7 @@ def main():
     Gender1 = st.number_input('Insert mean frequency')
     Age = st.number_input('Insert sd')
    
-    EstimatedSalary = st.number_input("Insert median)
+    EstimatedSalary = st.number_input("Insert median")
     resul=""
     if st.button("Predict"):
       result=predict_note_authentication(UserID, Gender1,Age,EstimatedSalary)
@@ -59,7 +59,7 @@ def main():
       
     if st.button("About"):
       st.subheader("Developed by Aachal Kala")
-      st.subheader("Head , Department of Computer Engineering")
+      st.subheader("Student , Department of Computer Engineering")
 
 if __name__=='__main__':
   main()
