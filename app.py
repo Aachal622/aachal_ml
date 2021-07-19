@@ -49,7 +49,7 @@ def main():
     
     #Gender1 = st.select_slider('Select a Gender Male:1 Female:0',options=['1', '0'])
     Gender1 = st.number_input('Insert mean frequency')
-    Age = st.number_input('Insert sd)
+    Age = st.number_input('Insert sd')
    
     EstimatedSalary = st.number_input("Insert median)
     resul=""
