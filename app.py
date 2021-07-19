@@ -23,9 +23,9 @@ def predict_note_authentication(UserID, Gender,Age,EstimatedSalary):
   output= model.predict(sc.transform([[Gender,Age,EstimatedSalary]]))
   print("Purchased", output)
   if output==[1]:
-    prediction="Item will be purchased"
+    prediction="PERSON IS FEMALE"
   else:
-    prediction="Item will not be purchased"
+    prediction="PERSON IS MALE"
   print(prediction)
   return prediction
 def main():
@@ -34,30 +34,31 @@ def main():
    <div class="" style="background-color:Brown;" >
    <div class="clearfix">           
    <div class="col-md-12">
-   <center><p style="font-size:40px;color:black;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center> 
+   <center><p style="font-size:40px;color:black;margin-top:10px;">Poornima Institute of Engineering & Technology</p></center>
+   <center><p style="font-size:30px;color:black;margin-top:10px;">Aachal Kala (PIET18CS001)</p></center> 
    <center><p style="font-size:30px;color:black;margin-top:10px;">Department of Computer Engineering</p></center> 
-   <center><p style="font-size:25px;color:black;margin-top:10px;"Machine Learning Lab Experiment</p></center> 
+   <center><p style="font-size:25px;color:black;margin-top:10px;"End term Machine Learning Lab Experiment</p></center> 
    </div>
    </div>
    </div>
    """
     st.markdown(html_temp,unsafe_allow_html=True)
-    st.header("Item Purchase Prediction using Logistic Classification")
+    st.header("Decision tree classifier to predict voice is male or female")
     
     UserID = st.text_input("UserID","")
     
     #Gender1 = st.select_slider('Select a Gender Male:1 Female:0',options=['1', '0'])
-    Gender1 = st.number_input('Insert Gender Male:1 Female:0')
-    Age = st.number_input('Insert a Age',18,60)
+    Gender1 = st.number_input('Insert mean frequency')
+    Age = st.number_input('Insert sd)
    
-    EstimatedSalary = st.number_input("Insert Estimated Salary",15000,150000)
+    EstimatedSalary = st.number_input("Insert median)
     resul=""
     if st.button("Predict"):
       result=predict_note_authentication(UserID, Gender1,Age,EstimatedSalary)
       st.success('Model has predicted {}'.format(result))
       
     if st.button("About"):
-      st.subheader("Developed by Deepak Moud")
+      st.subheader("Developed by Aachal Kala")
       st.subheader("Head , Department of Computer Engineering")
 
 if __name__=='__main__':
